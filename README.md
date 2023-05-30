@@ -1,0 +1,14 @@
+This project is for practice using the BERT transformer for NLP problems. My first attempt at utilizing. The notebook should be ran using google collab since Keras does not like Jupyter Notebook. Also for ease of use, make sure you set your runtime to using the gpu. Running 3 epochs took around 10mins, so make sure you keep the epochs low if you are trying to familiarize yourself with the transformer and not wanting to wait hours for your model to fit. 
+
+A little background about the BERT transformer:
+
+BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based model introduced by Google in 2018. It is designed to pre-train language representations using a large corpus of unlabeled text data and can then be fine-tuned for specific downstream natural language processing (NLP) tasks such as text classification, named entity recognition, question answering, and more.
+
+The key idea behind BERT is to learn contextualized word representations by considering the entire input sequence bidirectionally. Unlike previous models that typically process text in a left-to-right or right-to-left manner, BERT uses a "masked language modeling" objective to predict missing words in a sentence by looking at the surrounding context on both sides. This enables the model to capture deep contextual information and generate high-quality representations for individual words.
+
+BERT employs the transformer architecture, which is a self-attention mechanism-based model. The transformer model consists of an encoder-decoder structure, but in the case of BERT, only the encoder part is used. The encoder consists of multiple layers of self-attention and feed-forward neural networks. The self-attention mechanism allows the model to focus on different parts of the input sequence while encoding the information. It can capture dependencies between words, learn contextual relationships, and generate representations that capture both local and global context.
+
+During pre-training, BERT is trained on large-scale text data using two primary tasks: masked language modeling (MLM) and next sentence prediction (NSP). In MLM, a certain percentage of input tokens are randomly masked, and the model learns to predict those masked words based on the surrounding context. In NSP, the model is trained to predict whether two sentences appear consecutively in the original text or not. These pre-training tasks enable BERT to learn rich representations that capture both word-level and sentence-level information.
+
+After pre-training, BERT can be fine-tuned on specific downstream tasks by adding a task-specific layer on top of the pre-trained BERT model and training it on labeled task-specific data. The pre-trained BERT model serves as a powerful feature extractor, providing contextualized word representations that can be utilized for various NLP tasks.
+----ChatGPT 
